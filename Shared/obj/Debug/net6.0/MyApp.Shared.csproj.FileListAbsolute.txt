@@ -1,0 +1,12 @@
+D:\Web Development\Project2\MyApp\Shared\bin\Debug\net6.0\MyApp.Shared.deps.json
+D:\Web Development\Project2\MyApp\Shared\bin\Debug\net6.0\MyApp.Shared.dll
+D:\Web Development\Project2\MyApp\Shared\bin\Debug\net6.0\MyApp.Shared.pdb
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.csproj.AssemblyReference.cache
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.AssemblyInfoInputs.cache
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.AssemblyInfo.cs
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.csproj.CoreCompileInputs.cache
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.dll
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\refint\MyApp.Shared.dll
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\MyApp.Shared.pdb
+D:\Web Development\Project2\MyApp\Shared\obj\Debug\net6.0\ref\MyApp.Shared.dll
