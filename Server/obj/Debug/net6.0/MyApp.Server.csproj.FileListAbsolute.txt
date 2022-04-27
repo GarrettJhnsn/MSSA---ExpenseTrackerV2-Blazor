@@ -38,6 +38,11 @@ D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Microsoft.IdentityMode
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Microsoft.JSInterop.dll
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Microsoft.JSInterop.WebAssembly.dll
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Syncfusion.Blazor.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Syncfusion.ExcelExport.Net.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Syncfusion.Licensing.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\Syncfusion.PdfExport.Net.dll
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\System.Drawing.Common.dll
 D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -79,3 +84,4 @@ D:\Web Development\Project2\MyApp\Server\obj\Debug\net6.0\refint\MyApp.Server.dl
 D:\Web Development\Project2\MyApp\Server\obj\Debug\net6.0\MyApp.Server.pdb
 D:\Web Development\Project2\MyApp\Server\obj\Debug\net6.0\MyApp.Server.genruntimeconfig.cache
 D:\Web Development\Project2\MyApp\Server\obj\Debug\net6.0\ref\MyApp.Server.dll
+D:\Web Development\Project2\MyApp\Server\bin\Debug\net6.0\MudBlazor.dll

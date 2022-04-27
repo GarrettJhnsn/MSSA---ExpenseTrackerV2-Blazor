@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.4",
           "Microsoft.EntityFrameworkCore.Design": "6.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4",
+          "MudBlazor": "6.0.9",
           "MyApp.Client": "1.0.0",
           "MyApp.Shared": "1.0.0"
         },
@@ -110,7 +111,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/2.1.4": {
         "dependencies": {
           "Microsoft.Data.SqlClient.SNI.runtime": "2.1.1",
@@ -386,7 +387,7 @@
       },
       "Microsoft.IdentityModel.Tokens/6.8.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "Microsoft.IdentityModel.Logging": "6.8.0",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
@@ -439,6 +440,78 @@
             "assetType": "runtime",
             "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "MudBlazor/6.0.9": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.3",
+          "Microsoft.AspNetCore.Components.Web": "6.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/MudBlazor.dll": {
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.9.0"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Syncfusion.Blazor/20.1.0.50": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.3",
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "12.0.3",
+          "Syncfusion.ExcelExport.Net.Core": "20.1.0.50",
+          "Syncfusion.Licensing": "20.1.0.50",
+          "Syncfusion.PdfExport.Net.Core": "20.1.0.50",
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.Blazor.dll": {
+            "assemblyVersion": "20.1.0.50",
+            "fileVersion": "20.1.0.50"
+          }
+        }
+      },
+      "Syncfusion.ExcelExport.Net.Core/20.1.0.50": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.ExcelExport.Net.dll": {
+            "assemblyVersion": "20.1.0.50",
+            "fileVersion": "20.1.0.50"
+          }
+        }
+      },
+      "Syncfusion.Licensing/20.1.0.50": {
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.1.0.50",
+            "fileVersion": "20.1.0.50"
+          }
+        }
+      },
+      "Syncfusion.PdfExport.Net.Core/20.1.0.50": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.PdfExport.Net.dll": {
+            "assemblyVersion": "20.1.0.50",
+            "fileVersion": "20.1.0.50"
           }
         }
       },
@@ -604,13 +677,18 @@
       "MyApp.Client/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.3",
-          "MyApp.Shared": "1.0.0"
+          "MudBlazor": "6.0.9",
+          "MyApp.Shared": "1.0.0",
+          "Syncfusion.Blazor": "20.1.0.50"
         },
         "runtime": {
           "MyApp.Client.dll": {}
         }
       },
       "MyApp.Shared/1.0.0": {
+        "dependencies": {
+          "MudBlazor": "6.0.9"
+        },
         "runtime": {
           "MyApp.Shared.dll": {}
         }
@@ -686,12 +764,12 @@
       "path": "microsoft.aspnetcore.metadata/6.0.3",
       "hashPath": "microsoft.aspnetcore.metadata.6.0.3.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.5.0": {
+    "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/2.1.4": {
       "type": "package",
@@ -937,6 +1015,55 @@
       "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "MudBlazor/6.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PDBCp76JjU6JPTECPrVh4eHySgBuuTiDN9sd0YFlhIRuKs4X5/5nePqPIm5pfZiCHscRHeTfSRLs2Kjv40u6uw==",
+      "path": "mudblazor/6.0.9",
+      "hashPath": "mudblazor.6.0.9.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Syncfusion.Blazor/20.1.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0iIN7hEHq28pdI+yoBmTBuIDBxoECHV2k9IniOjh24LSlP7Nn41nV6EwzFGoQcLroYzYEuLlDd6s+yPQz6mWNA==",
+      "path": "syncfusion.blazor/20.1.0.50",
+      "hashPath": "syncfusion.blazor.20.1.0.50.nupkg.sha512"
+    },
+    "Syncfusion.ExcelExport.Net.Core/20.1.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eg/E/H8bKryV9rv+fn/M6zwcvSzNsjSRBwSDXI1wrxEU/rc8lGT3SAtEnujB87OJQL/LOwdsldogEPVJ9jTKNA==",
+      "path": "syncfusion.excelexport.net.core/20.1.0.50",
+      "hashPath": "syncfusion.excelexport.net.core.20.1.0.50.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/20.1.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sQBaysAP2fQ0ISeJjowl7wpiLjAwTUKxvQrft+QYTtjYbaUSxfoEh7tYi2/Pgs8qnGIrp+6PzIALI9bcVFPflw==",
+      "path": "syncfusion.licensing/20.1.0.50",
+      "hashPath": "syncfusion.licensing.20.1.0.50.nupkg.sha512"
+    },
+    "Syncfusion.PdfExport.Net.Core/20.1.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0p4Our3I0WUbObcbQbUlwvsxsJADh5piHg/7Nt4bl9EusSNivKr3ZNfUNml1ffc73N3wh/37RVCQziA+EG+TAQ==",
+      "path": "syncfusion.pdfexport.net.core/20.1.0.50",
+      "hashPath": "syncfusion.pdfexport.net.core.20.1.0.50.nupkg.sha512"
     },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",

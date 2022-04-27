@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x+Ffc7Cv5whmtAbmpU9xm+wybHBaHrZ8uBDW496Wyio5zv/WKReGIgHa7LaTMYsZxQEEeGN2SNJ1D2L76v1TDg==",
+  "dgSpecHash": "R6rwFWb41D3dC8LTgBcK3rfvGwvTy8Whke2+5OeX1G3i1s2GS4BPqfZudAg3jvmBLAf380iX1lS4N8irZ2tNhg==",
   "success": true,
   "projectFilePath": "D:\\Web Development\\Project2\\MyApp\\Client\\MyApp.Client.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\microsoft.aspnetcore.components.webassembly.6.0.3.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\6.0.3\\microsoft.aspnetcore.components.webassembly.devserver.6.0.3.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.3\\microsoft.aspnetcore.metadata.6.0.3.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
@@ -28,12 +29,20 @@
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.jsinterop\\6.0.3\\microsoft.jsinterop.6.0.3.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.3\\microsoft.jsinterop.webassembly.6.0.3.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\mudblazor\\6.0.9\\mudblazor.6.0.9.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\syncfusion.blazor\\20.1.0.50\\syncfusion.blazor.20.1.0.50.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\syncfusion.excelexport.net.core\\20.1.0.50\\syncfusion.excelexport.net.core.20.1.0.50.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\syncfusion.licensing\\20.1.0.50\\syncfusion.licensing.20.1.0.50.nupkg.sha512",
+    "C:\\Users\\garre\\.nuget\\packages\\syncfusion.pdfexport.net.core\\20.1.0.50\\syncfusion.pdfexport.net.core.20.1.0.50.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\system.io.pipelines\\6.0.2\\system.io.pipelines.6.0.2.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\garre\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\garre\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.3.nupkg.sha512"
+    "C:\\Users\\garre\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.4.nupkg.sha512"
   ],
   "logs": []
 }

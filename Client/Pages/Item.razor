@@ -1,45 +1,55 @@
 ﻿@page "/item"
 @page "/item/{id:int}"
 @inject IExpenseService ExpenseService
+@inject NavigationManager NavigationManager
 
+<!-- If Navigated To Item Page Without Id, User Prompted To Add New Expense -->
 @if(Id == null)
 {
-    <PageTitle>Add a new Expense</PageTitle>
-    <h3>Add a new Expense</h3>
+    <PageTitle>Add A New Expense</PageTitle>
+    <h3>Add A New Expense</h3>
 }
 else
 {
     <PageTitle>Edit @expense.Name</PageTitle>
     <h3>Edit @expense.Name</h3>
 }
-
+<!-- Edit Form For Expense Data. Same Form For Creating / Updating -->
 <EditForm Model="expense" OnSubmit="HandleSubmit">
     <div>
         <label for="Name">Name</label>
+        <!-- Binding User InputText To New expense.Name / If Updating Expense Starting Bind-Value Will Equal expense.Name {Id}  -->
         <InputText id="Name" @bind-Value="expense.Name" class="form-control"></InputText>
     </div>
     <div>
         <label for="Amount">Amount</label>
+        <!-- Binding User InputText To New expense.Amount / If Updating Expense Starting Bind-Value Will Equal expense.Amount {Id}  -->
         <InputNumber id="Amount" @bind-Value="expense.Amount" class="form-control"></InputNumber>
     </div>
     <div>
         <label>Type</label><br />
+        <!-- Creates Drop Down List, Adds Items To Drop Down List Via Foreach Loop Through ItemSets as itemType -->
         <InputSelect @bind-Value="expense.ItemSetId" class="form-select">
-            @foreach (var iType in ExpenseService.ItemSets)
+            @foreach (var itemType in ExpenseService.ItemSets)
             {
-                <option value="@iType.Id">@iType.Name</option>
+                <option value="@itemType.Id">@itemType.Name</option>
             }
         </InputSelect>
     </div>
     <br />
+    <!-- Nothing Is Saved Or Created / The User Sent Back To Expense List -->
+    <button class="btn btn-outline-primary" @onclick="@ReturnToList"><i class="oi oi-arrow-left"></i></button>
+    <!-- Submit Button Connects To Edit From With Type="submit" / Calls HandleSumbit() Method -->
     <button type="submit" class="btn btn-outline-primary">@btnText</button>
-    <button type="submit" class="btn btn-outline-danger" @onclick="DeleteItem">Delete Item</button>
+    <!-- If User Is Viewing Specific Item User Can Delete Item Based On Id -->
+    <button class="btn btn-outline-danger" @onclick="(() => DeleteItem(expense.Id))">Delete Item</button>
 
 </EditForm>
 
 
 @code {
     [Parameter]
+    /* int Id Created To Accept Incoming expense.Id / Can Be Nullable If User Is Creating Item */
     public int? Id { get; set; }
     string btnText = string.Empty;
 
@@ -47,12 +57,15 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        /* If Id == Null btnText = Save New Item Else btnText = Update Item */
         btnText = Id == null ? "Save New Item " : "Update Item";
         await ExpenseService.GetItemTypes();
     }
 
     protected override async Task OnParametersSetAsync()
     {
+        /* If New Item, Item Set Is Assigned To Index[0] So Drop Down Is Not Empty */
+        /* If Exisiting Item, Load Item Via Id Into Page*/
         if (Id == null)
         {
             expense.ItemSet = ExpenseService.ItemSets[0];
@@ -63,7 +76,7 @@ else
             expense = await ExpenseService.GetSingleExpense((int)Id);
         }
     }
-
+    /* Method For Handling Form Submit Option*/
     async Task HandleSubmit()
     {
         if(Id == null)
@@ -75,9 +88,14 @@ else
             await ExpenseService.UpdateItem(expense);
         }
     }
-
-    async Task DeleteItem()
+    /* Calls Expense SErvice To Delete Item Based On Id*/
+    async Task DeleteItem(int id)
     {
-        await ExpenseService.DeleteItem(expense.Id);
+        await ExpenseService.DeleteItem(id);
+    }
+    /* Navigates Users Back To Expense List */
+    void ReturnToList()
+    {
+        NavigationManager.NavigateTo("/list");
     }
 }

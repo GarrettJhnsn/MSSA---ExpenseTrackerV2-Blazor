@@ -29,14 +29,13 @@ namespace MyApp.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ItemSetId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -49,21 +48,21 @@ namespace MyApp.Server.Migrations
                         new
                         {
                             Id = 1,
-                            Amount = 365,
+                            Amount = 365m,
                             ItemSetId = 1,
                             Name = "Car"
                         },
                         new
                         {
                             Id = 2,
-                            Amount = 100,
+                            Amount = 100m,
                             ItemSetId = 2,
                             Name = "Dine out"
                         },
                         new
                         {
                             Id = 3,
-                            Amount = 20,
+                            Amount = 20m,
                             ItemSetId = 3,
                             Name = "Donation"
                         });

@@ -1,23 +1,5 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1:focus {
-    outline: none;
-}
-
-a, .btn-link {
-    color: #0071c1;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
-
 .content {
     padding-top: 1.1rem;
 }
@@ -63,32 +45,42 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-.table {
-    width: fit-content;
-}
 
 .spinner {
-    padding: 100px;
-    border: 0px;
-    border-top: 3px solid black;
-    border-radius: 100%;
+
+    position: absolute;
+    border: 100px;
+    border-top: .5px solid black;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 750ms normal infinite;
+    animation: spin 625ms normal infinite;
     top: 100%;
-    left: 55%;
+    left: 50%;
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(180deg)
+        transform: rotate(0deg)
     }
 
     100% {
-        transform: rotate(-180deg)
+        transform: rotate(360deg)
     }
 }
 .btn:focus, .btn:active {
     outline: none !important;
     box-shadow: none;
+}
+
+h4{
+    text-align: center;
+    padding: 2.5px;
+    color: black;
+}
+
+table {
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    text-align: left;
 }

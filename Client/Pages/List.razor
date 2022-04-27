@@ -4,64 +4,82 @@
 
 <PageTitle>Expense List</PageTitle>
 
-@if(!isLoading)
+<!-- await Task.Delay() To Let Loading Spinner Spin While DB Items Load -->
+@if(!isLoaded)
 {
-<div>
-  <div class="spinner spinner-border-sm"></div>
-</div>
+    <div class="spinner spinner-border" />
 }
 else
 {
-<div>
-    <h2>Expense Tracker</h2>
-    <h3>Current Items: Current Total: </h3>
-    <table class = "table table-striped">
-        <thead>
-            <tr>
-                <th scope-"col">Item</th>
-                <th scope-"col">Amount</th>
-                <th scope-"col">Type</th>
-                <th scope-"col"></th>
+<!-- Once (isLoaded == True) Load Main List -->
+<h4>Expense Tracker</h4>
+<!-- Total Items & Total Amount Constantly Tracked/Updated -->
+<h4>Current Items: @totalItems Current Total: $@totalAmount </h4>
+<table class = "table">
+    <thead class="table">
+        <tr>
+            <th scope-"col">Item</th>
+            <th scope-"col">Amount</th>
+            <th scope-"col">Type</th>
+            <th scope-"col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- For Each Item In ExpenseService.Expense List Print Data To Table -->
+        @foreach(var expense in ExpenseService.Expenses)
+        {
+            <tr>  
+                <td>@expense.Name</td>
+                <td>$@expense.Amount</td>
+                <td>@expense.ItemSet.Name</td>
+                <td>
+                    <!-- Button Is Assigned To Each expense Item // On Click That Specific Item Will Be Loaded Via expense.Id
+                         Loads /item/{id} Razor Page With Current Items Data In Boxes Ready For Edit/Delete -->
+                    <button class="btn btn-outline-primary" @onclick="(() => ShowExpense(expense.Id))"><i class="oi oi-pencil"></i></button>
+                </td>              
             </tr>
-        </thead>
-        <tbody>
-            @foreach(var expense in ExpenseService.Expenses)
-            {
-                <tr>
-                    <td>@expense.Name</td>
-                    <td>@expense.Amount</td>
-                    <td>@expense.ItemSet.Name</td>
-                    <td>
-                        <button class="btn btn-outline-primary" @onclick="(() => ShowExpense(expense.Id))"><i class="oi oi-pencil"></i></button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <button type="submit" class="btn btn-outline-primary" @onclick="CreateItem">Add Item</button>
-</div>  
+        }
+    </tbody>
+</table>
+<!-- Loads /item Razor Page Ready To Be Filled & Added To List  -->
+<button type="submit" class="btn btn-outline-primary" @onclick="CreateItem">Add Item</button>
 }
 
 
+
+
 @code {
-    private bool isLoading;
+    private bool isLoaded = false;
+    private int totalItems;
+    private decimal totalAmount;
+
 
     protected override async Task OnInitializedAsync()
-    {   await Task.Delay(1000);
-        isLoading = true;
+    {
+        /* Loading List On Page Load */
         await ExpenseService.GetExpenses();
-        
-    }
 
+        foreach(var expense in ExpenseService.Expenses)
+        {
+            /* Tracking Total Items/Total Cost Every Page Load */
+            totalItems++;
+            totalAmount += expense.Amount;
+        }
+
+        /* Task Delay For Spinner/DB Load In */
+        await Task.Delay(800);
+        isLoaded = true;
+
+    }
+    /* Method Using NavigationManager To Send User To item/{id} Page To Edit/Delete Item
+     *  Sending Item Id So Page Knows What Expense To Load */
     void ShowExpense(int id)
     {
         NavigationManager.NavigateTo($"item/{id}");
     }
-
+    /* Method Using NavigationManager To SEnd User To Blank item Page To Create New Item */
     void CreateItem()
     {
         NavigationManager.NavigateTo("item");
     }
-
-
 }
